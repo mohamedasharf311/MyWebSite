@@ -1,0 +1,223 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewnort" content="width=device-width, initial-scale=1.0">
+    <title>AboutMy</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style> 
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+body {
+  background: #081b29;
+  color: #ededed;
+  
+
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.Logo {
+  font-size: 25px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 600;
+}
+.navbar a {
+  font-size: 18px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+  color: #00abf0;
+  
+  
+}
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  
+}
+
+.home-content {
+  max-width: 600px;
+}
+.home-content h1{
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+
+}
+.home-content h3{
+  font-size: 32px;
+  font-weight: 700;
+  color: #00abf0;
+}
+.home-content p{
+  font-size: 16px;
+  margin: 20px 0 40px;
+  
+}
+
+
+
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.home-sci a:hover {
+  color: #081b29;
+}
+
+
+.home-sci a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: .5s;
+}
+
+
+.home-sci a:hover::before {
+  width: 100%;
+
+}
+
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+.about{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+.about-text h2 {
+  font-size: 60px;
+}
+.about-text h2 span{
+  color: #00abf0;
+}
+
+.about-text h4{
+  font-size: 29px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.7;
+  margin: 15px 0 30px;
+}
+
+.about-text p {
+  color: aliceblue;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+}
+</style>
+
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="Logo">MA</a>
+   
+    
+    <nav class="navbar">
+      <a href="index.html">home</a>
+      <a href="About.html">about</a>    
+      <a href="Skills.html">skills</a>
+      <a href="Services.html">services</a>
+      <a href="Portfolio.html">portfolio</a>
+      <a href="Contact.html">contact</a>
+    
+    </nav>
+  
+  
+    
+  </header>
+
+
+  <section class= "home">
+    <section class="about" id="about">
+    <div class="about-text">
+      <h2>About <span>Me</span></h2>
+<h4>Full Stack Developer</h4>
+<p>
+  Hi, I'm <strong>Mohamed</strong> — a passionate Full Stack Developer specializing in <strong>Python, Django, and API development</strong>.  
+  I thrive on turning complex problems into elegant, scalable solutions.  
+  Whether you're building something from scratch or enhancing an existing system, I'm here to help bring your vision to life.  
+  Let's create something amazing together.
+</p>
+
+
+      </p>
+    </section>
+    </div>
+
+    <div class="home-content">
+    </div>
+    <div class ="home-sci">
+      <a href="Contact.html"><i class="bx bxl-whatsapp"></i></a>
+      <a href="Contact.html"><i class="bx bxl-github"></i></a>
+      <a href="Contact.html"><i class="bx bxl-linkedin"></i></a>
+
+    </div>
+    <span class='imghover'></span>
+  </section>  
+
+
+      
+</body>
+</html>

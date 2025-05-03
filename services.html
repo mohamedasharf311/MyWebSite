@@ -1,0 +1,268 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyServices</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+body {
+
+  background-color:rgb(3, 3, 26);
+  color: #ededed;
+
+}
+
+.header {
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.Logo {
+  font-size: 25px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 600;
+}
+.navbar a {
+  font-size: 18px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+  color: #00abf0;
+  
+  
+}
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;  
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.home-sci a:hover {
+  color: #081b29;
+}
+
+
+.home-sci a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: .5s;
+}
+
+
+.home-sci a:hover::before {
+  width: 100%;
+
+}
+#service{
+  color: aliceblue;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 4rem;
+}
+
+.sub-title{
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 70px;
+}
+.sub-title span{
+  color: #0ef;
+}
+
+.containar {
+  padding: 90px;
+}
+.services-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div {
+  background: transparent;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 13px;
+  border-right: 10px;
+  border-radius: 20px;
+  transition: background 0.5s, transform 0.5s;
+  box-shadow: 1px 1px 20px #012290f7,
+              1px 1px 48px #0053b8f7 ;
+            
+}
+
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.services-list div a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+ .read {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #0ef;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px #0ef , 
+  0 0 25px #0ef;
+  
+ }
+
+ .read:hover{ 
+  box-shadow: 0 0 5px cyan ,
+  0 0 25px cyan, 0 0 50px cyan ,
+  0 0 100px cyan, 0 0 200px cyan;
+ }
+
+.services-list div:hover{
+  transform: translateY(-10px);
+ }
+</style>
+
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="Logo">MA</a>
+   
+    
+    <nav class="navbar">
+      <a href="index.html">home</a>
+      <a href="About.html">about</a>    
+      <a href="Skills.html">skills</a>
+      <a href="Services.html">services</a>
+      <a href="Portfolio.html">portfolio</a>
+      <a href="Contact.html">contact</a>
+
+    </nav>
+  
+  
+    
+  </header>
+  
+  <section class="home">
+    <section class="service" id="service">
+      <div class="containar">
+        <h1 class="sub-title">My <span>Services</span></h1>
+        <div class="services-list">
+  
+          <div>
+            <i class="fas fa-code"></i>
+            <h2>Web Development</h2>
+            <p>
+              I design and develop responsive, high-performance websites using modern technologies like HTML, CSS, JavaScript, Django, and React. Whether it's a landing page or a full-stack platform, I ensure clean code and seamless UX.
+            </p>
+            <a href="#" class="read">Learn More</a>
+          </div>
+  
+          <div>
+            <i class="fas fa-brain"></i>
+            <h2>AI & Machine Learning</h2>
+            <p>
+              I build smart applications powered by artificial intelligence and machine learning. From data preprocessing to deploying trained models, I help businesses unlock insights and automation using tools like Python, TensorFlow, and Scikit-learn.
+            </p>
+            <a href="#" class="read">Learn More</a>
+          </div>
+  
+          <div>
+            <i class="fas fa-cogs"></i>
+            <h2>API Integration</h2>
+            <p>
+              Need to connect your app with third-party services? I specialize in building and consuming RESTful APIs, ensuring reliable integration between front-end interfaces and back-end data systems.
+            </p>
+            <a href="#" class="read">Learn More</a>
+          </div>
+  
+          <div>
+            <i class="fas fa-mobile-alt"></i>
+            <h2>Mobile-Friendly Design</h2>
+            <p>
+              I make sure your application looks and works perfectly across all screen sizes. Using responsive frameworks and best UI/UX practices, I deliver designs that adapt seamlessly to mobile, tablet, and desktop devices.
+            </p>
+            <a href="#" class="read">Learn More</a>
+          </div>
+  
+        </div>
+      </div>
+    </section>
+    <div class="home-content">
+      <!-- Add intro or hero content here if needed -->
+    </div>
+  </section>
+  
+</body>
+</html>

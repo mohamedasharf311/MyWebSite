@@ -1,0 +1,618 @@
+<lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+  background-color:rgb(3, 3, 26);
+  color: #ededed;
+
+}
+
+
+.header {
+    position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 20px 10%;
+   background: transparent;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 100;
+ }
+ .Logo {
+   font-size: 25px;
+   color: #ededed;
+   text-decoration: none;
+   font-weight: 600;
+ }
+ .navbar a {
+   font-size: 18px;
+   color: #ededed;
+   text-decoration: none;
+   font-weight: 500;
+   margin-left: 35px;
+   transition: 0.3s;
+ }
+ 
+ .navbar a:hover,
+ .navbar a.active{
+   color: #00abf0;
+   
+   
+ }
+ .home {
+    height: 250vh;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+  }
+  
+  .home-sci a:hover {
+    color: #081b29;
+  }
+  
+  
+  .home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+  }
+  
+  
+  .home-sci a:hover::before {
+    width: 100%;
+  
+  }
+   
+
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container1 {
+  width: 600px;
+  height: 500px;
+  padding: 75px 90px;
+  margin-left: 120px;
+}
+
+
+
+.Technical-bars .bar {
+  margin-top: 40px 0;
+}
+
+.Technical-bars .bar:first-child {
+  margin-top: 0;
+}
+
+.Technical-bars .bar:last-child {
+  margin-bottom: 0;
+}
+
+.Technical-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.Technical-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+.Technical-bars .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.Technical-bars .bar .progress-line span {
+  height: 100%;
+  background-color: #0ef;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+.Technical-bars .bar {
+  margin-top: 40px 0;
+}
+
+.Technical-bars .bar:first-child {
+  margin-top: 0;
+}
+
+.Technical-bars .bar:last-child {
+  margin-bottom: 0;
+}
+
+.Technical-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.Technical-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+.Technical-bars .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #000000;
+  animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+  transform-origin: left;
+
+}
+
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.Technical-bars .bar .progress-line span {
+  height: 100%;
+  background-color: #0ef;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+.Technical-bars .bar:first-child {
+  margin-top: 0;
+}
+
+.Technical-bars .bar:last-child {
+  margin-bottom: 0;
+}
+
+.Technical-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.Technical-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+.Technical-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+.Technical-bars .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #add8e6; /* ← لبني (Light Blue) */
+  animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+  transform-origin: left;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.Technical-bars .bar .progress-line span {
+  height: 100%;
+  background-color: #0ef;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+  transform-origin: right;
+}
+  .progress-line.html span{
+    width: 90%;
+  }
+  .progress-line.css span{
+    width: 90%;
+  }
+  .progress-line.python span{
+    width: 90%;
+  }
+  .progress-line.javascript span{
+    width: 90%;
+  }
+  .progress-line.django span{
+    width: 90%;
+  }
+  .progress-line.java span{
+    width: 90%;
+  }
+  
+  .progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: 28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+  }
+  
+  .progress-line.html span::after {
+    content: "90%"
+  }
+  .progress-line.css span::after {
+    content: "90%"
+  }
+  .progress-line.python span::after {
+    content: "90%"
+  }
+  .progress-line.django span::after {
+    content: "90%"
+  }
+  .progress-line.javascript span::after {
+    content: "90%"
+  }
+  .progress-line.java span::after {
+    content: "90%"
+  }
+  
+  .progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    background-color: #add8e6; /* ← لبني (Light Blue) */
+    top: -10px;
+    right: 0;
+    animation: showText 0.5 1.5s linear forwards;
+  }
+  @keyframes showText{
+    100%{
+    }
+  }
+  
+  .radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  
+  .radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+  
+  }
+  
+  .radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50% ;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 120px;
+    height: 160px;
+  }
+  
+  .radial-bars .radial-bar .progress-bar{
+    stroke-width: 10 ;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+  }
+  
+  @keyframes animate-bar{
+    100%{
+      stroke-dashoffset: -1;
+    }
+  }
+  
+  .path {
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+  }
+  
+  .path-1{animation: animate-path1 1s 1s linear forwards;}
+  .path-2{animation: animate-path2 1s 1s linear forwards;}
+  .path-3{animation: animate-path3 1s 1s linear forwards;}
+  .path-4{animation: animate-path4 1s 1s linear forwards;}
+  
+  @keyframes animate-path1{
+    100%{
+      stroke-dashoffset: 50;;
+    }
+  }
+  @keyframes animate-path2{
+    100%{
+      stroke-dashoffset: 175;;
+    }
+  }
+  @keyframes animate-path3{
+    100%{
+      stroke-dashoffset: 125;;
+    }
+  }
+  @keyframes animate-path4{
+    100%{
+      stroke-dashoffset: 75;;
+    }
+  }
+  
+  
+  .radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+  }
+  
+  .radial-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+  }
+</style>
+
+
+</head>
+<body>
+
+  <header class="header">
+    <a href="/" class="Logo">MA</a>
+   
+    
+    <nav class="navbar">
+      <a href="index.html">home</a>
+      <a href="About.html">about</a>    
+      <a href="Skills.html">skills</a>
+      <a href="Services.html">services</a>
+      <a href="Portfolio.html">portfolio</a>
+      <a href="Contact.html">contact</a>
+
+    </nav>
+  
+  
+    
+  </header>
+
+  <section>
+    <h1 class="sub-tite">My <span>Skills</span></h1>
+    <div class="container1" id="Skills">
+      <h1 class="heading1">Technical Skills</h1>
+      <div class="Technical-bars">
+  
+        <div class="bar"><i style="color: #c95d2e" class="bx bxl-html5"></i>
+          <div class="info"><span>HTML</span></div>
+          <div class="progress-line html">
+            <span style="width: 90%;" data-percent="90%"></span>
+          </div>
+        </div>
+  
+        <div class="bar"><i style="color: #147bbc" class="bx bxl-css3"></i>
+          <div class="info"><span>CSS</span></div>
+          <div class="progress-line css">
+            <span style="width: 85%;" data-percent="85%"></span>
+          </div>
+        </div>
+  
+        <div class="bar"><i style="color: #c32ec9" class="bx bxl-python"></i>
+          <div class="info"><span>Python</span></div>
+          <div class="progress-line python">
+            <span style="width: 80%;" data-percent="80%"></span>
+          </div>
+        </div>
+  
+        <div class="bar"><i style="color: #062e13" class="bx bxl-django"></i>
+          <div class="info"><span>Django</span></div>
+          <div class="progress-line django">
+            <span style="width: 75%;" data-percent="75%"></span>
+          </div>
+        </div>
+  
+        <div class="bar"><i style="color: #d3dbd6" class="bx bxl-java"></i>
+          <div class="info"><span>Java</span></div>
+          <div class="progress-line java">
+            <span style="width: 70%;" data-percent="70%"></span>
+          </div>
+        </div>
+  
+        <div class="bar"><i style="color: rgb(208, 255, 0)" class="bx bxl-javascript"></i>
+          <div class="info"><span>JavaScript</span></div>
+          <div class="progress-line javascript">
+            <span style="width: 75%;" data-percent="75%"></span>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+        <div class="container1">
+          <h1 class="heading1">Professional Skills</h1>
+          <div class="radial-bars">
+        
+            <!-- Creativity -->
+            <div class="radial-bar">
+              <svg viewBox="0 0 200 200">
+                <defs>
+                  <clipPath id="circleView1">
+                    <circle cx="100" cy="100" r="60" />
+                  </clipPath>
+                </defs>
+                <image href="creativity.jpg" x="40" y="40" width="120" height="120" clip-path="url(#circleView1)" />
+                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+              </svg>
+              <div class="percentage">90%</div>
+              <div class="text">Creativity</div>
+            </div>
+        
+            <!-- Communication -->
+            <div class="radial-bar">
+              <svg viewBox="0 0 200 200">
+                <defs>
+                  <clipPath id="circleView2">
+                    <circle cx="100" cy="100" r="60" />
+                  </clipPath>
+                </defs>
+                <image href="communication.jpg" x="40" y="40" width="120" height="120" clip-path="url(#circleView2)" />
+                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+              </svg>
+              <div class="percentage">93%</div>
+              <div class="text">Communication</div>
+            </div>
+        
+            <!-- Problem Solving -->
+            <div class="radial-bar">
+              <svg viewBox="0 0 200 200">
+                <defs>
+                  <clipPath id="circleView3">
+                    <circle cx="100" cy="100" r="60" />
+                  </clipPath>
+                </defs>
+                <image href="problem-solving.jpg" x="40" y="40" width="120" height="120" clip-path="url(#circleView3)" />
+                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+              </svg>
+              <div class="percentage">65%</div>
+              <div class="text">Problem Solving</div>
+            </div>
+        
+            <!-- Teamwork -->
+            <div class="radial-bar">
+              <svg viewBox="0 0 200 200">
+                <defs>
+                  <clipPath id="circleView4">
+                    <circle cx="100" cy="100" r="60" />
+                  </clipPath>
+                </defs>
+                <image href="teamwork.jpg" x="40" y="40" width="120" height="120" clip-path="url(#circleView4)" />
+                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+              </svg>
+              <div class="percentage">80%</div>
+              <div class="text">Teamwork</div>
+            </div>
+        
+          </div>
+        </div>
+                
+  </section>  
+
+</body>
+</html>

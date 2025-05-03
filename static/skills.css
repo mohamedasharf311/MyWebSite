@@ -1,0 +1,303 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #08161b;
+  color: #ededed;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  color: #ededed;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #ededed;
+  margin-left: 35px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00abf0;
+}
+
+/* Home Section */
+.home {
+  height: 250vh;
+  background: url('Z.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.home-sci a:hover {
+  color: #081b29;
+}
+
+.home-sci a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+}
+
+/* Section Layout */
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Skills Container */
+.container1 {
+  width: 600px;
+  height: auto;
+  padding: 75px 90px;
+  margin-left: 120px;
+}
+
+.heading1 {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
+}
+
+.bar {
+  font-size: 23px;
+}
+
+.Technical-bars .bar {
+  margin: 40px 0;
+}
+
+.Technical-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.Technical-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+.Technical-bars .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #add8e6; /* ← لبني (Light Blue) */
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0, 1) forwards;
+}
+
+.Technical-bars .bar .progress-line span {
+  height: 100%;
+  background-color: #0ef;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0, 1) forwards;
+}
+
+.progress-line span::after,
+.progress-line span::before {
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+
+.progress-line span::after {
+  content: attr(data-percent);
+  position: absolute;
+  padding: 1px 8px;
+  background-color: #000102; /* ← لبني (Light Blue) */
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  top: 28px;
+  right: -20px;
+}
+
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0;
+  border-right-width: 0;
+  background-color: #000000; /* ← لبني (Light Blue) */
+  top: 20px;
+  right: 0;
+}
+
+/* Animations */
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive (اختياري) */
+@media (max-width: 768px) {
+  .container1 {
+    width: 90%;
+    padding: 40px 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Radial Skill Bars */
+.radial-bar {
+  width: 45%;
+  height: 250px;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.radial-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 120px;
+  height: 120px;
+  z-index: 1;
+}
+
+.radial-bar .progress-bar,
+.radial-bar .path {
+  stroke-width: 10;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+}
+
+.radial-bar .progress-bar {
+  stroke: #000;
+  animation: animate-bar 1s linear forwards;
+}
+
+.radial-bar .path {
+  stroke: #0ef;
+}
+
+.path-1 { animation: animate-path1 1s 1s linear forwards; }
+.path-2 { animation: animate-path2 1s 1s linear forwards; }
+.path-3 { animation: animate-path3 1s 1s linear forwards; }
+.path-4 { animation: animate-path4 1s 1s linear forwards; }
+
+@keyframes animate-bar {
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes animate-path1 { 100% { stroke-dashoffset: calc(502 - 502 * 0.90); } }
+@keyframes animate-path2 { 100% { stroke-dashoffset: calc(502 - 502 * 0.93); } }
+@keyframes animate-path3 { 100% { stroke-dashoffset: calc(502 - 502 * 0.65); } }
+@keyframes animate-path4 { 100% { stroke-dashoffset: calc(502 - 502 * 0.80); } }
+
+.skill-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.radial-bar .percentage {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0ef;
+}
+
+.radial-bar .text {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: red;
+}
